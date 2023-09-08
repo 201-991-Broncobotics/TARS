@@ -1,9 +1,10 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.ADIS16448_IMU;
+// import edu.wpi.first.wpilibj.ADIS16448_IMU;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.TalonSRXControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
@@ -29,6 +30,7 @@ public class Mecanum extends SubsystemBase {
         mecanum_motors[3].setInverted(true);
 
         for (int i = 0; i < 4; i++) {
+            mecanum_motors[i].setNeutralMode(NeutralMode.Brake);
             mecanum_motors[i].setSelectedSensorPosition(0); // I think 4096 counts per revolution but I'm not sure
             // idrc
         }

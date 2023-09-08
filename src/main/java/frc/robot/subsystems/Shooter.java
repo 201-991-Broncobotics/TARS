@@ -16,7 +16,7 @@ public class Shooter extends SubsystemBase {
     public Shooter() {
         shoot = new Solenoid(PneumaticsModuleType.CTREPCM, 0);
         load  = new Solenoid(PneumaticsModuleType.CTREPCM, 2);
-    
+        
         shooter = new TalonSRX(0);
     }
 

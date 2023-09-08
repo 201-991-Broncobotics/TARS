@@ -9,7 +9,7 @@ public class Horn extends SubsystemBase {
     private final Solenoid horn; 
     
     public Horn() {
-        horn  = new Solenoid(PneumaticsModuleType.CTREPCM, 4); 
+        horn  = new Solenoid(PneumaticsModuleType.CTREPCM, 4);
     }
 
     public void sleep() {
